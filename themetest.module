@@ -45,7 +45,7 @@ function themetest_menu() {
   $items['themetest/form'] = array(
     'title' => 'Form',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('themetest_form_try'),
+    'page arguments' => array('themetest_form_test'),
     'access arguments' => array('access content'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 1,
@@ -131,7 +131,7 @@ function themetest_page() {
 /**
  * Dummy form for testing.
  */
-function themetest_form_try($form_state) {
+function themetest_form_test($form_state) {
   // form from Form Api quick start guide
   // http://drupal.org/node/751826
 

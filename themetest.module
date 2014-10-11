@@ -32,7 +32,6 @@ function themetest_permission() {
  * Implements hook_init().
  */
 function themetest_menu() {
-  $items = array();
   $items['themetest'] = array(
     'title' => 'Theme Test',
     'page callback' => 'themetest_page',
@@ -180,11 +179,11 @@ function themetest_menu() {
 }
 
 /**
- * Page for three tab page. Included three type of messages, help, breadcrumb,
- * HTML and pager
+ * Page for three tab page.
+ * Included three type of messages, help, breadcrumb, HTML and pager.
  */
 function themetest_page() {
-// Try breadcrumb
+// Try breadcrumb.
   $breadcrumb = array();
   $breadcrumb[] = l('Home', '<front>');
   $breadcrumb[] = l('Tab 1', 'themetest');
@@ -196,7 +195,7 @@ function themetest_page() {
   }
   drupal_set_breadcrumb($breadcrumb);
 
-  // Try message
+  // Try message.
   drupal_set_message(t('Short status message 1'), 'status');
   drupal_set_message(t('Short warning message 1'), 'warning');
   drupal_set_message(t('Short error message 1'), 'error');
@@ -211,10 +210,10 @@ function themetest_page() {
     drupal_set_message(t('Long error message: <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Fusce eget sapien arcu, sed ' . l('with a link', '') . ' cursus turpis. Fusce sed convallis metus. Donec in libero sit amet nisl consectetur rutrum. Quisque commodo nunc eget lectus interdum porta. Ut nec rhoncus mi. Proin et justo tortor, vel fringilla lorem.'), 'error');
   }
 
-  // Try content
+  // Try content.
   $output = themetest_get_html();
 
-  // Try pager
+  // Try pager.
   global $pager_total, $pager_page_array;
   $pager_total[0] = 200;
 
@@ -233,7 +232,7 @@ function themetest_page() {
  * Dummy form for testing.
  */
 function themetest_form_test($form_state) {
-  // form from Form Api quick start guide
+  // Form Api quick start guide.
   // http://drupal.org/node/751826
   // Access log settings:
   $options = array('1' => t('Enabled'), '0' => t('Disabled'));
@@ -295,7 +294,7 @@ function themetest_form_test($form_state) {
     '#title' => t('CV'),
     '#description' => t('Enter the name for this group of settings'),
   );
-  // Description
+  // Description.
   $form['details'] = array(
     '#type' => 'fieldset',
     '#title' => t('Details'),
@@ -343,7 +342,7 @@ function themetest_form_test($form_state) {
     '#options' => $period,
     '#description' => t('Enter the name for this group of settings'),
   );
-  // Description
+  // Description.
   $form['other_details'] = array(
     '#type' => 'fieldset',
     '#title' => t('Details'),
@@ -378,7 +377,7 @@ function themetest_form_test($form_state) {
 }
 
 /**
- * Render tables page
+ * Render tables page.
  */
 function themetest_tables() {
   $output = '';

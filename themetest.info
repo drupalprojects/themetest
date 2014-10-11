@@ -1,4 +1,4 @@
 name = Theme Test
 core = 7.x
 
-files[] = themetest.module
+configure = themetest

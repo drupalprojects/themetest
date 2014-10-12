@@ -294,6 +294,13 @@ function themetest_form_test($form_state) {
     '#title' => t('CV'),
     '#description' => t('Enter the name for this group of settings'),
   );
+  $form['access']['person']['upload'] = array(
+    '#type' => 'managed_file',
+    '#required' => TRUE,
+    '#title' => t('Upload document'),
+    '#description' => t('Enter the name for this group of settings'),
+    '#size' => 30,
+  );
   // Description.
   $form['details'] = array(
     '#type' => 'fieldset',
@@ -362,7 +369,14 @@ function themetest_form_test($form_state) {
     '#title' => t('Only admin can view'),
     '#default_value' => variable_get('admin', 0),
   );
-
+  $form['other_details']['fruits'] = array(
+    '#type' => 'checkboxes',
+    '#required' => FALSE,
+    '#title' => t('Fruits'),
+    '#description' => t('Please select fruit.'),
+    '#default_value' => array('apple'),
+    '#options' => drupal_map_assoc(array('apple', 'pears', 'peach')),
+  );
   $form['name'] = array(
     '#type' => 'textfield',
     '#title' => t('Name'),

@@ -467,8 +467,8 @@ function themetest_get_html() {
 <h3>Quotes</h3>
 <p>This is a blockquote:<br /></p><blockquote>Contents should not be swallowed. This is due to the enormous amount of harmful chemicals that has gone into this burger.</blockquote>
 <h3>Images</h3>
-<p><img src="http://www.jeffnoyes.com/non-drupal/milford_sound_t.jpg"></p>
-<em>Pictures from site of Jeff Noyes :)</em>
+<p><img src="http://www.quackit.com/pix/milford_sound/milford_sound_t.jpg"></p>
+<em>HTML Image Example :)</em>
 <h3>Lists</h3>
 <h2>Ordered list:</h2>
 <ol><li>List item 1</li>
